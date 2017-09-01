@@ -26,26 +26,27 @@ class btlib {
         return String.valueOf(s);
     }
 
-    static List<Integer> fibonacci(int number) {
-        List<Integer> seq = new ArrayList<>();
+    static List<Long> fibonacci(int num) {
+        long number = num;
+        List<Long> seq = new ArrayList<>();
 
-        if (number < 1 || (number > 47)) {
+        if (number < 1  || (number > 93 ) ) {
             throw new IllegalArgumentException(
-                "Expected: Number in range 1 to 47" + ". " +
+                "Expected: Number in range 1 to 93" + ". " +
                 "Actual: Number is " + number + ".");
         }
 
         if (number == 1) {
-            return Arrays.asList(0);
+            return Arrays.asList(0L);
         }
 
         if (number == 2) {
-            return Arrays.asList(0, 1);
+            return Arrays.asList(0L, 1L);
         }
 
-        seq.add(0);
+        seq.add(0L);
         number = number - 1;
-        seq.add(1);
+        seq.add(1L);
         number = number - 1;
 
         while (number > 0) {
