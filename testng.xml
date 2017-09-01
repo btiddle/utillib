@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="BT Library Tests" verbose="1" >
+
+    <test name="Fibonacci" >
+        <classes>
+            <class name="com.btiddle.FibonacciTests" />
+        </classes>
+    </test>
+
+    <test name="ReverseString">
+        <classes>
+            <class name="com.btiddle.ReverseStringTests"/>
+        </classes>
+    </test>
+
+</suite>
