@@ -1,6 +1,6 @@
 package com.btiddle;
 
-import static com.btiddle.btlib.reverseString;
+import static com.btiddle.utillib.reverseString;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 

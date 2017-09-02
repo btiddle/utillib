@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="BT Library Tests" verbose="1" >
+<suite name="Utility Library" verbose="1" >
 
     <test name="Fibonacci" >
         <classes>

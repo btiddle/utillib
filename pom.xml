@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.btiddle</groupId>
-    <artifactId>btlib</artifactId>
+    <artifactId>utillib</artifactId>
     <version>0.0.1</version>
 
     <dependencies>
@@ -14,7 +14,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.11</version>
-            <scope>compile</scope>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

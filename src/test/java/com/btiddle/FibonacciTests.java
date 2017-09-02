@@ -1,6 +1,6 @@
 package com.btiddle;
 
-import static com.btiddle.btlib.fibonacci;
+import static com.btiddle.utillib.fibonacci;
 import java.util.Arrays;
 import java.util.List;
 import org.testng.annotations.Test;
