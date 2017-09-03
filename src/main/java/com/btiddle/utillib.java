@@ -6,6 +6,49 @@ import java.util.List;
 
 class utillib {
 
+    /*
+    A palindrome is a word, phrase, or sequence that reads the same backward as
+    forward, e.g., madam or nurses run.
+
+    This method checks if a string is a palindrome using assumptions:
+    • String is a single word with no spaces, i.e. "madam" is true,
+      while "nurses run" is false.
+    • Does not ignore capitalization, i.e. "Madam" is false.
+    • Does not strip spaced at front or end of string, i.e. " madam" is false,
+      "madam " is false, and " madam " is true.
+
+    */
+    static boolean isWordPalindrome (String str) {
+        boolean palindrome = true;
+
+        // Exception if string is null
+        if (str == null) {
+            throw new IllegalArgumentException(
+                "Expected: String to be not null. " +
+                "Actual: String is null.");
+        }
+
+        // Exception if string is empty
+        if (str.isEmpty()) {
+            throw new IllegalArgumentException(
+                "Expected string to be not empty. " +
+                "Actual string is emppty.");
+        }
+
+        // Traverse front to middle, back to middle, and check if characters
+        // are equal.
+        int back = str.length() - 1;
+        for (int front = 0; front < str.length() / 2; front++) {
+            if (str.charAt(front) != str.charAt(back - front)) {
+                palindrome = false;
+                break;
+            }
+
+        }
+
+        return (palindrome);
+    }
+
     static String reverseString(String str) {
         if (str == null) {
             throw new IllegalArgumentException("String cannot be null.");

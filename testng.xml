@@ -2,6 +2,12 @@
 
 <suite name="Utility Library" verbose="1" >
 
+    <test name="IsWordPalindrome" >
+        <classes>
+            <class name="com.btiddle.IsWordPalindromeTests" />
+        </classes>
+    </test>
+
     <test name="Fibonacci" >
         <classes>
             <class name="com.btiddle.FibonacciTests" />
