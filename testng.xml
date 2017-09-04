@@ -2,9 +2,15 @@
 
 <suite name="Utility Library" verbose="1" >
 
-    <test name="IsWordPalindrome" >
+    <test name="IsSentencePalindromeTests" >
         <classes>
             <class name="com.btiddle.IsWordPalindromeTests" />
+        </classes>
+    </test>
+
+    <test name="IsWordPalindrome" >
+        <classes>
+            <class name="com.btiddle.IsSentencePalindromeTests" />
         </classes>
     </test>
 

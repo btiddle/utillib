@@ -49,6 +49,86 @@ class utillib {
         return (palindrome);
     }
 
+
+
+    /*
+    A palindrome is a word, phrase, number, or other sequence of characters
+    which reads the same backward as forward, such as madam or racecar.
+    Sentence-length palindromes may be written when allowances are made for
+    adjustments to capital letters, punctuation, and word dividers, such as
+    "A man, a plan, a canal, Panama!", "Was it a car or a cat I saw?" or
+    "No 'x' in Nixon".
+
+    This method checks if a string is a palindrome using assumptions:
+    • String is a single word or multiple words
+    • Ignore letter capitalization, i.e. it is not case sensitive
+    • Ignore spaces
+    • Ignore punctuation
+
+    */
+
+    static boolean moreChars(int front, int len) {
+        return (front < len / 2);
+    }
+
+    static boolean isSentencePalindrome (String str) {
+        boolean palindrome = true;
+
+        // Exception if string is null
+        if (str == null) {
+            throw new IllegalArgumentException(
+                "Expected: String to be not null. " +
+                "Actual: String is null.");
+        }
+
+        // Exception if string is empty
+        if (str.isEmpty()) {
+            throw new IllegalArgumentException(
+                "Expected string to be not empty. " +
+                "Actual string is empty.");
+        }
+
+        // Traverse simultaneously front to middle and back to middle . Check if
+        // characters are equal.
+        int front = 0;
+        int back = str.length() - 1;
+        int len = str.length();
+
+        for (front = 0; moreChars(front, len); front++, back--) {
+
+            // At front, ignore char if not a letter or a digit
+            while (!Character.isLetterOrDigit(str.charAt(front)) && moreChars(front, len)) {
+                front = front + 1;
+                len = len - 1;
+            }
+
+            // Check if beyond center
+            if (!moreChars(front, len)) {
+                break;
+            }
+
+            // At back, ignore char if not a letter or a digit
+            while (!Character.isLetterOrDigit(str.charAt(back)) && moreChars(front, len)) {
+                back = back - 1;
+                len = len - 1;
+            }
+
+            // Check if beyond center
+            if (!moreChars(front, len)) {
+                break;
+            }
+
+            // Check if front and back chars are equal
+            if (Character.toLowerCase(str.charAt(front)) != Character.toLowerCase(str.charAt(back))) {
+                palindrome = false;
+                break;
+            }
+        }
+
+        return (palindrome);
+    }
+
+
     static String reverseString(String str) {
         if (str == null) {
             throw new IllegalArgumentException("String cannot be null.");
